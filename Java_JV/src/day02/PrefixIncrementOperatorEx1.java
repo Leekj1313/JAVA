@@ -11,7 +11,7 @@ public class PrefixIncrementOperatorEx1 {
 		System.out.println("증가 중 : num1 = " + ++num1 + ", num2 = " + num2++);
 		System.out.println("증가 후 : num1 = " + num1 + ", num2 = " + num2);
 		
-		System.out.println("=============================");
+		System.out.println("=========================");
 		//전위형과 후위형 동작을 전위형 하나로 이용하여 후휘형도 구현
 		//나눠서 계산
 		num1 = 1;

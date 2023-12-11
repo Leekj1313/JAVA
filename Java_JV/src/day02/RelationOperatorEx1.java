@@ -2,7 +2,7 @@ package day02;
 
 public class RelationOperatorEx1 {
 	
-	//비교 (관계)언산자 예제
+	//비교 (관계)연산자 예제
 	public static void main(String[] args) {
 		int num1 = 1, num2 = 2;
 		
