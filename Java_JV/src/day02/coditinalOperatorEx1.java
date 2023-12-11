@@ -15,8 +15,7 @@ public class coditinalOperatorEx1 {
 		 */
 		result = score <= 100 && score >= 90 ?"A학점 입니다." : "A학점이 아닙니다.";
 		System.out.println(score + " 점은 " +  result);
-		
-		
+	
 
 	}
 
