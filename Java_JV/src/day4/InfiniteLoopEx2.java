@@ -33,6 +33,17 @@ public class InfiniteLoopEx2 {
 			num = scan.nextInt();
 			System.out.print("정수출력 : " + num);
 	}
-
 }
-		
+}
+
+
+	for(int i = 0; i <4; i++) {
+		for(int j=3; j > i; j--) {
+			System.out.print(" ");
+			
+		for(int j = 0; j < i * 2 + 1; j++)
+			System.out.print("*");
+			
+			System.out.println(" ");
+		}
+	}
