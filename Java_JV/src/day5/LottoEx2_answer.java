@@ -69,9 +69,9 @@ public class LottoEx2_answer {
 		}
 		// 당첨개수에 따른 등수를 출력
 		switch(sameCount) {
-		case 6 :
+		case 1 :
 			break;
-		case 5 :
+		case 2 :
 			int i;
 			// 시용자기 입력한 번호에 보너스와 일치하는 번호가 있는지 확인
 			for( i = 0, i<user.length; i++) {
@@ -82,10 +82,10 @@ public class LottoEx2_answer {
 				}
 				break;
 			}
-		case 4 :
+		case 3 :
 			break;
 			System.out.println("4등");
-		case 3 :
+		case 4 :
 			System.out.println("5등");
 			break;
 			default :
