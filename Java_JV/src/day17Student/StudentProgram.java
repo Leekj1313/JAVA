@@ -68,7 +68,6 @@ public class StudentProgram implements program {
 		}
 	}
 
-	@Override
 	public void printMenu() {
 		System.out.println("------메뉴------");
 		System.out.println("1. 학생 추가");
