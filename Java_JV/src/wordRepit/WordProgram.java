@@ -4,6 +4,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import program.program;
+import wordRepit.service.FileService;
+import wordRepit.service.FileServiceImp;
 import wordRepit.service.PrintService;
 import wordRepit.service.PrintServiceImp;
 
@@ -15,13 +17,20 @@ public class WordProgram implements program {
 	private final int FAME_EXIT = 4; // 임시
 	
 	private Scanner scan = new Scanner(System.in);
+	
 	private PrintService printService = new PrintServiceImp();
+	private FileService fileService = new FileServiceImp();
 	
 	private Vocabulary vocabulary = new Vocabulary(null); // 단어장 생성
 	
 	@Override
 	public void run() {
 		int menu = 0;
+		// 불러오기
+		String fileName = "src/word/wordList.txt";
+		
+		List<Word>list = fileService.load("src/word/wordList.txt");
+		vocabuary = new Vocabuary(list);
 		do {
 			try {
 				printMenu();
@@ -34,12 +43,33 @@ public class WordProgram implements program {
 				scan.nextLine();
 			}
 		}while(menu != EXIT);
+		// 저장하기
+		fileService.save(fileName.vocabuary.getList());
 	}
 	@Override
 	public void printMenu() {
-		printService.printMainMenu();
+		switch(menu) {
+		case 1:
+			printAll();
+			break;
+		case 2:
+			printSearch();
+			break;
+		case 3:
+			printAllByViews();
+			break;
+		case 4:
+			System.out.println("프로그램을 종료합니다");
+			break;
+		default:
+			throw new InputMismatchException();
+		}
 	}
 
+	private void printAllByViews() {
+		// TODO Auto-generated method stub
+		
+	}
 	@Override
 	public void runMenu(int menu) {
 		switch(menu) {
@@ -61,7 +91,22 @@ public class WordProgram implements program {
 
 	}
 	private void gameManager() {
-		// TODO Auto-generated method stub
+		int menu;
+		switch(menu) {
+		case 1:
+			playGame();
+			break;
+		case 2:
+			
+			break;
+		case 3:
+			break;
+		case 4:
+			System.out.println("이전 메뉴로 돌아갑니다");
+			break;
+		default:
+			throw new InputMismatchException();
+		}
 		
 	}
 	private void meanManager() {
@@ -204,7 +249,8 @@ public class WordProgram implements program {
 	private void addWord() {
 		// 단어, 픔사, 뜻을 입력
 		System.out.println("단어 : ");
-		
+		scan.nextLine();
+		String word = scan.nextLine();
 		System.out.println("품사 : ");
 		
 		System.out.println("뜻 : ");

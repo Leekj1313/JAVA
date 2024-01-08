@@ -1,5 +1,6 @@
 package wordRepit;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -10,8 +11,10 @@ import lombok.Data;
 
 // 영어 단어 하나를 의미하는 클래스
 @Data
-public class Word {
-	
+public class Word implements Serializable {
+
+	private static final long serialVersionUID = 4497595096872700968L;
+
 	private String word; // 단어
 	private List<Mean> meanList; // 품사와 뜻 리스트
 	private int views; // 조회수
