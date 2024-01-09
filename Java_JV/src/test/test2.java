@@ -18,8 +18,9 @@ public class test2 {
 //public class MyCollection {
 	
 	public void test() {
-
-	
+		
+		public Fruit(String string, String string2);
+		
 		ArrayList<Fruit> list = new ArrayList<Fruit>();
 		list.add(new Fruit("사과", "빨강"));	// Fruit 에 대한 선언이 없어 오류가 발생
 		list.add(new Fruit("메론", "초록"));	// Fruit 에 대한 선언이 없어 오류가 발생
@@ -28,5 +29,6 @@ public class test2 {
 		
 		for(int i = 0; i <= list.size(); i++) {
 			System.out.println(list.get(i));
+		}
 	}
 }
