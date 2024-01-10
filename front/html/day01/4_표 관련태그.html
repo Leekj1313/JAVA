@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        table 태그
+            - 테이블을 만들기 위해 필요한 태그
+        tr 태그
+            - 한 열을 나타내는 태그
+        td 태그
+            - 한 행을 나타내는 태그
+        th 태그
+            - 한 열을 나타내는 태그
+        thead 태그
+            - 테이블 제목에 해당
+        tbody 태그
+            - 테이블 내용
+        tfood 태그 
+            - 테이블 끄트올, 평군과 같이 내용을 종합할 때 사용
+        figure 태그
+            - 요소를 설명하는 타그
+        figcaption 태그
+            - 요소 앞에 있으면 오소 위에 설명을 작성
+            - 요소 뒤에 있으면 요소 뒤에 설명을 작성
+        caption 태그
+            - 표를 설명하는 태그
+            - 상단 가운데 위치
+        colgroup
+        clo 태그
+
+    -->
+    <figure>
+        <table>
+            <caption>성적표</caption>
+            <colgroup>
+            <col style="background-color : yellow;">
+            <col style="background-color : aliceblue;">
+            <col style="background-color : gray;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>과목</th>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>성적</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>홍길동</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th rowspan="2">HTML</th>
+                    <td>2</td>
+                    <td>고길동</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <!--<th>HTML</th>-->
+                    <td>평균</td>
+                    <td></td>
+                    <td>95</td>
+                </tr>
+            </tfoot>
+                <tr>평균</tr>
+        </table>
+        <figcaption>학생 이름과 성적을 보여 줌</figcaption>
+    </figure>
+</body>
+</html>
