@@ -31,6 +31,10 @@ public class Student {
 	public int hashCode() {
 		return Objects.hash(classNum, grade, num);
 	}
+	public char[] getScore() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }	
 
 	
